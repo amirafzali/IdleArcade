@@ -1,0 +1,19 @@
+{
+  "name": "idle-arcade",
+  "version": "1.0.0",
+  "description": "Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirafzali/IdleArcade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirafzali/IdleArcade/issues"
+  },
+  "homepage": "https://github.com/amirafzali/IdleArcade#readme"
+}
