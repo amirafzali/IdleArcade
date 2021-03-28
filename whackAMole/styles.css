@@ -1,0 +1,106 @@
+body {
+    background-color: #88a200;
+}
+
+td {
+    text-align: center; 
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.gameOverImg {
+    margin-top: 8vh;
+    height: 20vh;
+    width: 40vw;
+}
+
+.gameTable {
+    margin-left: -12%;	
+    cursor: url('./assets/hammer100.png'), auto;
+}
+
+.hole {
+    /* display: block; */
+    background: url(assets/hole.png) bottom center no-repeat;
+    background-size: 11.3vw ;
+    position: relative;
+    content: '';
+    width: 20vw;
+    height: 25vh;
+    /* z-index: 1; */
+    /* display: inherit; */
+}
+
+.mole {
+    width: 11.3vw;
+    display: none;
+    /* display: none; */
+    /* z-index: 1;
+    cursor: url('./assets/hammer100.png'), auto;
+    position: relative; */
+}
+
+.mole:active {
+    opacity: 0.8;
+}
+
+.pop {
+    display: inline;
+}
+
+.score {
+    float: right;
+    margin-top: -15vh;
+    background-color:red;
+    width: 10vw;
+    text-align: center; 
+    font-size: 2vw;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.startBtn {
+    float: left;
+    margin-top: -15vh;
+    background-color:green;
+    width: 10vw;
+    text-align: center; 
+    font-size: 2vw;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.startBtn:hover {
+    opacity: 0.8;
+}
+
+.titleImg {
+    height: 15vh;
+    width: 30vw;
+}
+
+.returnBtn {
+    margin-top: 8vh;
+    background-color:rgb(189, 7, 7);
+    width: 20vw;
+    text-align: center; 
+    font-size: 2vw;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.returnBtn:hover {
+    opacity: 0.8;
+}

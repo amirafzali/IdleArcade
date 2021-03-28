@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Whack-a-Mole!</title>
+    <meta name="description" content="Whack-a-Mole arcade game">
+    <meta name="author" content="Joy Xiao">
+
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <div>
+        <img src="./assets/gameTitle.png" alt="Whack-a-Mole logo" class="center titleImg" draggable="false">
+        <div class="startBtn" role="button" onClick="startGame()">
+            Start
+        </div>
+        <div class="score">
+            <span>Score: <span id="scoreInt">0</span></span>
+        </div>
+    </div>
+    <div class="center">
+        <table class="gameTable">
+            <tr>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+                <td>
+                    <div class="hole">
+                        <img src="./assets/mole.png" class="mole" role="button" onClick="addScore()" draggable="false">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="gameover" class="hide">
+        <img src="./assets/gameover.png" alt="Gameover" class="center gameOverImg" draggable="false">
+        <div class="center returnBtn" role="button" onClick="returnToMain()">
+            Return to Main
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
