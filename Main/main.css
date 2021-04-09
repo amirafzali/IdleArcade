@@ -1,4 +1,4 @@
-.btnDiv {
+.topButtons {
 	outline-color: blue;
 	border-radius: 20px;
 	color: white;
@@ -14,7 +14,7 @@
   	padding-top: 20px;
 }
 
-.btnDiv:hover {
+.topButtons:hover {
 	opacity: 0.8;
 }
 
