@@ -1,0 +1,45 @@
+.topButtons {
+	outline-color: blue;
+	border-radius: 20px;
+	color: white;
+	background-color: red;
+	height: 50px;
+	width: 200px;
+	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	vertical-align: middle;
+  	margin-right: 25px;
+  	margin-left: 25px;
+  	padding-top: 20px;
+}
+
+.topButtons:hover {
+	opacity: 0.8;
+}
+
+.btnRowDiv {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainScreenStats{
+	margin-right: 60px;
+  	margin-left: 60px;
+  	font-size: 40px;
+  	text-align: center;
+}
+
+.scoreBalanceRowDiv {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+	font-family: Arial, Helvetica, sans-serif;
+}
