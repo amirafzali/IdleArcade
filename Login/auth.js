@@ -19,6 +19,8 @@ $(document).ready(() => {
         allFields.forEach(id => {
             $("#"+id).val("")
         })
+
+        $("#feedback").hide()
         email = ""
         password = ""
         username = ""
@@ -79,15 +81,46 @@ $(document).ready(() => {
         })
     }
 
+    function setError(message) {
+        $("#feedback").removeClass("alert-success")
+        $("#feedback").addClass("alert-danger")
+        $("#feedback").html(message)
+        $("#feedback").show()
+    }
+
+    function setSuccess(message) {
+        $("#feedback").removeClass("alert-danger")
+        $("#feedback").addClass("alert-success")
+        $("#feedback").html(message)
+        $("#feedback").show()
+    }
+
     function formSubmits() {
-        let x = ['loginButton', 'registerFormButton', 'resetButton']
-        x.forEach((tag) => {
-            $("#"+tag).click(() => {
-                console.log(email)
-                console.log(password)
-                console.log(confirm)
-                console.log(username)
-            })
-        });
+        $("#loginButton").click(async (e) => {
+            let res = await login(email, password)
+            if(res.error) {
+                setError(res.error)
+            } else {
+                setSuccess("Successfully logged in!")
+            }            
+        })
+
+        $("#registerFormButton").click(async (e) => {
+            let res = await registerUser(email,username,password,confirm)
+            if(res.error) {
+                setError(res.error)
+            } else {
+                setSuccess('Account successfully created!')
+            }   
+        })
+
+        $("#resetButton").click(async (e) => {
+            let res = await resetPassword(email)
+            if(res.error) {
+                setError(res.error)
+            } else {
+                setSuccess("Reset email sent. Please check your email!")
+            }   
+        })
     }
 })

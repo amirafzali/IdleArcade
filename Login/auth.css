@@ -9,7 +9,7 @@
 .auth-container {
     width: 25%;
     border: 1px solid lightgray;
-    padding: 2%;
+    padding: 2% 2% 1% 2%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10px;
@@ -59,4 +59,9 @@
 
 .secondary-btns {
     text-decoration: none;
+}
+
+#feedback {
+    margin-top: 5%;
+    text-align: center;
 }
