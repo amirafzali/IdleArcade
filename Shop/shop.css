@@ -1,7 +1,7 @@
 .header {
     font-weight: 500;
     font-size: 30px;
-    color: #CCCCCC;
+    color: #BBBBBB;
 }
 #title {
     margin-bottom: 25px;
@@ -22,7 +22,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 2px;
-    background-color: #CCCCCC;
+    background-color: #BBBBBB;
 }
 
 .upgrade-container {
@@ -45,8 +45,8 @@
     justify-content: center;
     margin-top: 15px;
     font-size: 15px;
-    background-color: #CCCCCC;
-    border: 3px solid #CCCCCC;
+    background-color: #BBBBBB;
+    border: 3px solid #BBBBBB;
 }
 
 .item-image {
@@ -60,7 +60,7 @@
     padding: 10px;
     margin-right: 3px;
     text-align: left;
-    color: #66FF66;
+    color: #55EE55;
     background-color: black;
 }
 .item-button:hover {
@@ -79,6 +79,6 @@
     text-align: left;
     font-size: 9px;
     font-style: oblique;
-    color: #CCCCCC;
+    color: #BBBBBB;
     background-color: black;
 }

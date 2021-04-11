@@ -1,7 +1,7 @@
 const helper = {
     helper1: {
         name: "Kid",
-        price: 10,
+        price: "10",
         effect: {
             description: "Recruit a kid to collect arcade tickets for you.",
             tps: 0.1
@@ -10,7 +10,7 @@ const helper = {
 
     helper2: {
         name: "Arcade Veteran",
-        price: 100,
+        price: "100",
         effect: {
             description: "Recruit an arcade veteran to collect even more arcade tickets for you.",
             tps: 1
@@ -19,7 +19,7 @@ const helper = {
 
     helper3: {
         name: "Broken Machine",
-        price: 1000,
+        price: "1,000",
         effect: {
             description: "Break open an arcade machine and pocket the tickets inside.",
             tps: 10
@@ -28,16 +28,16 @@ const helper = {
 
     helper4: {
         name: "Employee",
-        price: 10000,
+        price: "10,000",
         effect: {
-            description: "Bribe an employee to give you arcade tickets directly.",
+            description: "Become friends with an employee so they'll give you arcade tickets directly.",
             tps: 50
         }
     },
 
     helper5: {
         name: "Branch Manager",
-        price: 100000,
+        price: "100,000",
         effect: {
             description: "Bribe a branch manager to give you his entire stock of tickets.",
             tps: 250
@@ -46,7 +46,7 @@ const helper = {
 
     helper6:{
         name: "Ticket Factory",
-        price: 1000000,
+        price: "1,000,000",
         effect: {
             description: "Build a factory that produces arcade tickets automatically.",
             tps: 1250
@@ -56,56 +56,56 @@ const helper = {
 
 const upgrade = {
     upgrade1: {
-        name: "Up1",
-        price: 10,
+        name: "Bag of Candies",
+        price: "100",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of kids.",
+            multiplier: 2
         }
     },
 
     upgrade2: {
-        name: "Up2",
-        price: 100,
+        name: "Arcade Bully",
+        price: "1,000",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of arcade veterans.",
+            multiplier: 2
         }
     },
 
     upgrade3: {
-        name: "Up3",
-        price: 100,
+        name: "Baseball Bat",
+        price: "10,000",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of broken machines.",
+            multiplier: 2
         }
     },
 
     upgrade4: {
-        name: "Up4",
-        price: 100,
+        name: "BFFs",
+        price: "100,000",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of employees.",
+            multiplier: 2
         }
     },
 
     upgrade5: {
-        name: "Up5",
-        price: 100,
+        name: "Deep Pockets",
+        price: "1,000,000",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of branch managers.",
+            multiplier: 2
         }
     },
 
     upgrade6: {
-        name: "Up6",
-        price: 100,
+        name: "Sweatshops",
+        price: "10,000,000",
         effect: {
-            description: "Description here",
-            multiplier: 1
+            description: "Doubles the efficiency of ticket factories.",
+            multiplier: 2
         }
     }
 }
