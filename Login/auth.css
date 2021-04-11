@@ -1,0 +1,64 @@
+.imagine {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 25%;
+    border: 1px solid lightgray;
+    padding: 2%;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#auth-title {
+    text-align: center;
+}
+
+.auth-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group {
+    padding-top: 2%;
+    width: 100%;
+}
+
+
+.bundle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+
+
+.space {
+    height: 5px;
+}
+
+#reset-section {
+    text-align: center;
+}
+
+.input-group-text {
+    height: 100%;
+}
+
+.secondary-btns {
+    text-decoration: none;
+}

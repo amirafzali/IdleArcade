@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/amirafzali/IdleArcade/issues"
   },
-  "homepage": "https://github.com/amirafzali/IdleArcade#readme"
+  "homepage": "https://github.com/amirafzali/IdleArcade#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }
