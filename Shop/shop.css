@@ -1,0 +1,84 @@
+.header {
+    font-weight: 500;
+    font-size: 30px;
+    color: #CCCCCC;
+}
+#title {
+    margin-bottom: 25px;
+    font-size: 45px;
+}
+
+.shop-container {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    padding: 25px;
+    background-color: black;
+    user-select: none;
+}
+
+.category-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2px;
+    background-color: #CCCCCC;
+}
+
+.upgrade-container {
+    margin: 3px;
+    padding: 15px;
+    background-color: black;
+}
+
+.helper-container {
+    margin: 3px;
+    padding: 15px;
+    background-color: black;
+}
+
+/* ---------- ITEM STYLING ---------- */
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 15px;
+    background-color: #CCCCCC;
+    border: 3px solid #CCCCCC;
+}
+
+.item-image {
+    width: auto;
+}
+
+.item-button {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 10px;
+    margin-right: 3px;
+    text-align: left;
+    color: #66FF66;
+    background-color: black;
+}
+.item-button:hover {
+    cursor: pointer;
+    filter: brightness(2);
+}
+.item-button:active {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+.item-desc {
+    flex-grow: 1;
+    width: 300px;
+    padding: 10px;
+    text-align: left;
+    font-size: 9px;
+    font-style: oblique;
+    color: #CCCCCC;
+    background-color: black;
+}
