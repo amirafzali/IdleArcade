@@ -1,5 +1,5 @@
-var score = 0; 
-var balance = 0;
+var score; 
+var balance;
 var leaderBoard = false;
 var faq = false;
 var logout = false;
@@ -20,8 +20,12 @@ function start() {
     //addScore(addScore, score);
 }
 
+
+
 function addScore(addScore, score) {
-    score = addScore + score;
+    //score = addScore + score; 
+    score += 1;
+    document.getElementById("mainScreenScoreInt").innerHTML = score;
   }
 
 function playMinigame() {
