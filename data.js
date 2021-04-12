@@ -20,23 +20,23 @@ const updateState = (newState) => {
     localStorage.setItem('state', JSON.stringify(newState))
 }
 
+const arcadeMachineClick = () => {
+    addTickets(getMultiplier('click'));
+    console.log(getMultiplier('click'));
+}
+
+
 const resetState = () => {
     const newState = {
         balance: 0,
         score: 0,
         upgrades: {},
         helpers: {},
-        multipliers: {},
+        multipliers: {'click': 1},
         loggedIn: false,
         username: ""
     }
     updateState(newState)
-}
-
-const incrementMultiplier = (n) => {
-    const state = getState()
-    state.multiplier += n
-    updateState(state)
 }
 
 const addTickets = (n) => {
@@ -44,6 +44,7 @@ const addTickets = (n) => {
     state.balance += n
     self.score += n
     updateState(state)
+    document.getElementById("mainScreenScoreInt").innerHTML = getState().balance
 }
 
 const removeTickets = (n) => {
@@ -112,7 +113,7 @@ const getUsername = () => {
 
 const getMultiplier = (m) => {
     const state = getState()
-    if(!(m in state.multipliers)) retrun 0
+    if(!(m in state.multipliers)) return 0
     return state.multipliers[m]
 }
 

@@ -31,7 +31,11 @@ $(document).ready(() => {
     }
 
     $("#machine").on('click', e => {
-        addScore();
+        arcadeMachineClick();
+    });
+
+    $("#reset").on('click', e => {
+        resetState();
     });
 
     function playMinigame() {
