@@ -21,18 +21,23 @@ const updateState = (newState) => {
 
 const addTickets = (n) => {
     const state = getState()
-    state.score += n
+    state.balance += n
+    self.score += n
     updateState(state)
 }
 
 const removeTickets = (n) => {
     const state = getState()
-    if(state.score-n < 0) return
-    state.score -= n
+    if(state.balance-n < 0) return
+    state.balance -= n
     updateState(state)
 }
 
 const getTickets = () => {
+    return getState().balance
+}
+
+const getScore = () => {
     return getState().score
 }
 
