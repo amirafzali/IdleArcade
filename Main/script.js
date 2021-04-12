@@ -1,12 +1,4 @@
 $(document).ready(() => {
-    var score; 
-    var balance;
-    var leaderBoard = false;
-    var faq = false;
-    var logout = false;
-    var reportBug = false;
-    var minigame = false;
-
     $(function(){
         $("#ticketShop").load("../Shop/shop.html"); 
     });    
@@ -22,7 +14,11 @@ $(document).ready(() => {
         document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance
     }
 
-    updateValues()
+    $("#authButton").hide()
+
+    setInterval(toggleAuth, 2000)
+
+    
 
     $("#machine").on('click', e => {
         arcadeMachineClick();
@@ -45,27 +41,25 @@ $(document).ready(() => {
         window.open("../Leaderboards/leaderboards.html");
     });
 
-    $("#logout").on('click', e => {
-        //resetState();
+    $("#authButton").on('click', e => {
+        if(auth.currentUser) {
+            auth.signOut().then(() => {
+                $("#authButton").html("Login")
+            }).catch(e => {
+                location.reload()
+            })
+        } else {
+            window.open("../Login/auth.html");
+        }
     });
 
-    function playMinigame() {
-
-    }
-
-    function logout() {
-
-    }
-
-    function openReportBug() {
-
-    }
-
-    function openFaq() {
-
-    }
-
-    function openLeaderboard() {
-
+    function toggleAuth() {
+        console.log('s')
+        $("#authButton").show()
+        if(auth.currentUser) {
+            $("#authButton").html("Logout")
+        } else {
+            $("#authButton").html("Login")
+        }
     }
 });
