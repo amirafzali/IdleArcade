@@ -54,9 +54,6 @@ $(document).ready(() => {
         //resetState();
     });
 
-    window.open("/Main/main.html");
-
-
     function playMinigame() {
         //call minigame controller 
         //var addScore = gets click data from minigame controller
