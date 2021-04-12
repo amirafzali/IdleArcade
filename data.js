@@ -57,7 +57,7 @@ const addHelper = (helper) => {
 
 const getHelpers = () => {
     const state = getState()
-    return state[upgrades]
+    return state.helpers
 }
 
 const getUsername = () => {
