@@ -38,6 +38,25 @@ $(document).ready(() => {
         resetState();
     });
 
+    $("#openReportBug").on('click', e => {
+        window.open("../Bug/BugReport.html");
+    });
+
+    $("#openFaq").on('click', e => {
+        resetState();
+    });
+
+    $("#openLeaderboard").on('click', e => {
+        resetState();
+    });
+
+    $("#logout").on('click', e => {
+        resetState();
+    });
+
+    window.open("/Main/main.html");
+
+
     function playMinigame() {
         //call minigame controller 
         //var addScore = gets click data from minigame controller
