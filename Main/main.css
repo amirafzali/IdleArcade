@@ -6,7 +6,7 @@
 	font-family: 'Press Start 2P';
 	user-select: none;
 	background-color: black;
-	justify-content: space-around;
+	justify-content: space-evenly
 }
 
 .arcadeContainer {

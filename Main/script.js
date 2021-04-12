@@ -15,7 +15,8 @@ $(document).ready(() => {
     }
 
     $("#authButton").hide()
-
+    
+    updateValues()
     setInterval(toggleAuth, 2000)
 
     
