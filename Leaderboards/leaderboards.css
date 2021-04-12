@@ -1,0 +1,56 @@
+.imagine {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leader-container {
+    width: 25%;
+    border: 1px solid lightgray;
+    padding: 2% 2% 1% 2%;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: #BBBBBB;
+}
+
+#leaderTitle {
+    text-align: center;
+    color: #125a12;
+}
+
+#tableBody {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#tableBody::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 60vh;
+}
+
+thead {
+    flex: 0 0 auto;
+}
+
+tbody {
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    color: #125a12;
+    background-color: #BBBBBB;
+}
