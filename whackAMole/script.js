@@ -21,11 +21,12 @@ function startGame() {
         }
         document.getElementById('gameover').classList.remove('hide');
     }, 
-    //the timeout of the game in milliseconds
+    //the timeout of the game in milliseconds 10000 (10s)
     10000);
 }
 
 function popOut() {
+    //mole popout time
     const time = Math.random() * (1000-500) + 500;
     mole = moles[Math.floor((Math.random()*9))];
     mole.classList.add('pop');

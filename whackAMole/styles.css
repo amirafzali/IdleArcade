@@ -25,13 +25,13 @@ td {
 }
 
 .hole {
-    /* display: block; */
+    display: block;
     background: url(assets/hole.png) bottom center no-repeat;
     background-size: 11.3vw ;
     position: relative;
     content: '';
     width: 20vw;
-    height: 25vh;
+    height: 11vw;
     /* z-index: 1; */
     /* display: inherit; */
 }
@@ -39,6 +39,9 @@ td {
 .mole {
     width: 11.3vw;
     display: none;
+    background-size: 11.3vw ;
+    position: relative;    
+    content: '';
     /* display: none; */
     /* z-index: 1;
     cursor: url('./assets/hammer100.png'), auto;
