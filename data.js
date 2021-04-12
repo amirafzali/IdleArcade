@@ -42,9 +42,10 @@ const resetState = () => {
 const addTickets = (n) => {
     const state = getState()
     state.balance += n
-    self.score += n
+    state.score += n
     updateState(state)
-    document.getElementById("mainScreenScoreInt").innerHTML = getState().balance
+    document.getElementById("mainScreenScoreInt").innerHTML = getState().score
+    document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance
 }
 
 const removeTickets = (n) => {
