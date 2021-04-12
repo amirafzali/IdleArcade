@@ -27,7 +27,7 @@ const addTickets = (n) => {
 
 const removeTickets = (n) => {
     const state = getState()
-    if(state.score < 0) return
+    if(n < 0) return
     state.score -= n
     updateState(state)
 }
@@ -35,7 +35,6 @@ const removeTickets = (n) => {
 const getTickets = () => {
     return getState().score
 }
-
 
 const addUpgrade = (upgrade) => {
     const state = getState()
