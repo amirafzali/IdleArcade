@@ -9,23 +9,7 @@ $(document).ready(() => {
 
     $(function(){
         $("#ticketShop").load("../Shop/shop.html"); 
-    });
-
-    function start() {
-        score = 0; //load from database
-        balance = 0; //load from database
-
-        leaderBoard = false;
-        faq = false;
-        logout = false;
-        reportBug = false;
-        minigame = false;
-        
-        //var addScore = gets click data from arcade machine
-        //addScore(addScore, score);
-    }
-
-    
+    });    
 
     const arcadeMachineClick = () => {
         addTickets(getMultiplier('click'));
@@ -39,13 +23,14 @@ $(document).ready(() => {
     }
 
     updateValues()
-    
+
     $("#machine").on('click', e => {
         arcadeMachineClick();
     });
 
     $("#reset").on('click', e => {
         resetState();
+        updateValues()
     });
 
     $("#openReportBug").on('click', e => {
