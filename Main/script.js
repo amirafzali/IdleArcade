@@ -1,51 +1,58 @@
-var score; 
-var balance;
-var leaderBoard = false;
-var faq = false;
-var logout = false;
-var reportBug = false;
-var minigame = false;
+$(document).ready(() => {
+    var score; 
+    var balance;
+    var leaderBoard = false;
+    var faq = false;
+    var logout = false;
+    var reportBug = false;
+    var minigame = false;
 
-function start() {
-    score = 0; //load from database
-    balance = 0; //load from database
+    $(function(){
+        $("#ticketShop").load("../Shop/shop.html"); 
+    });
 
-    leaderBoard = false;
-    faq = false;
-    logout = false;
-    reportBug = false;
-    minigame = false;
-    
-    //var addScore = gets click data from arcade machine
-    //addScore(addScore, score);
-}
+    function start() {
+        score = 0; //load from database
+        balance = 0; //load from database
 
+        leaderBoard = false;
+        faq = false;
+        logout = false;
+        reportBug = false;
+        minigame = false;
+        
+        //var addScore = gets click data from arcade machine
+        //addScore(addScore, score);
+    }
 
+    function addScore() {
+        score += 1;
+        document.getElementById("mainScreenScoreInt").innerHTML = `<span id="mainScreenScoreInt">${score}</span>`;
+    }
 
-function addScore(addScore, score) {
-    //score = addScore + score; 
-    score += 1;
-    document.getElementById("mainScreenScoreInt").innerHTML = score;
-  }
+    $("#machine").on('click', e => {
+        addScore();
+    });
 
-function playMinigame() {
-    //call minigame controller 
-    //var addScore = gets click data from minigame controller
-    //addScore(addScore, score);
-}
+    function playMinigame() {
+        //call minigame controller 
+        //var addScore = gets click data from minigame controller
+        //addScore(addScore, score);
+    }
 
-function logout() {
+    function logout() {
 
-}
+    }
 
-function openReportBug() {
+    function openReportBug() {
 
-}
+    }
 
-function openFaq() {
+    function openFaq() {
 
-}
+    }
 
-function openLeaderboard() {
+    function openLeaderboard() {
 
-}
+    }
+});
