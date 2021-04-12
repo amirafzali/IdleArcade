@@ -5,31 +5,31 @@ $(document).ready(() => {
   let r = Math.min(w, h)/2;
   let rotation = 0;
   let oldrotation = 0;
-  let color = d3.scale.category20();
 
   const prize_data = [
-    {prize:"Question 1", message:"What CSS property is used for specifying the area between the content and its border?"},
-    {prize:"Question 2", message:"What CSS property is used for changing the font?"},
-    {prize:"Question 3", message:"What CSS property is used for changing the color of text?"},
-    {prize:"Question 4", message:"What CSS property is used for changing the boldness of text?"}, 
-    {prize:"Question 5", message:"What CSS property is used for changing the size of text?"},
-    {prize:"Question 6", message:"What CSS property is used for changing the background color of a box?"},
-    {prize:"Question 7", message:"Which word is used for specifying an HTML tag that is inside another tag?"},
-    {prize:"Question 8", message:"Which side of the box is the third number in: margin:1px 1px 1px 1px; ?"},
-    {prize:"Question 9", message:"What are the fonts that don't have serifs at the ends of letters called?"},
-    {prize:"Question 10", message:"With CSS selectors, what character prefix should one use to specify a class?"},
-    {prize:"Question 11", message:"With CSS selectors, what character prefix should one use to specify an ID?"},
-    {prize:"Question 12", message:"In an HTML document, which tag holds all of the content people see?"},
-    {prize:"Question 13", message:"In an HTML document, which tag indicates an unordered list?"},
-    {prize:"Question 14", message:"In an HTML document, which tag indicates the most important heading of your document?"},
-    {prize:"Question 15", message:"What CSS property is used for specifying the area outside a box?"},
-    {prize:"Question 16", message:"What type of bracket is used for HTML tags?"},
-    {prize:"Question 17", message:"What type of bracket is used for CSS rules?"},
-    {prize:"Question 18", message:"Which HTML tag is used for specifying a paragraph?"},
-    {prize:"Question 19", message:"What should always be the very first line of code in your HTML?"},
-    {prize:"Question 20", message:"What HTML tag holds all of the metadata tags for your page?"}
+    {prize:"500 Tickets", message:""},
+    {prize:"Prize 2", message:""},
+    {prize:"Prize 3", message:""},
+    {prize:"Prize 4", message:""}, 
+    {prize:"Prize 5", message:""},
+    {prize:"500 Tickets", message:""},
+    {prize:"Prize 7", message:""},
+    {prize:"Prize 8", message:""},
+    {prize:"Prize 9", message:""},
+    {prize:"Prize 10", message:""},
+    {prize:"500 Tickets", message:""},
+    {prize:"Prize 12", message:""},
+    {prize:"Prize 13", message:""},
+    {prize:"Prize 14", message:""},
+    {prize:"Prize 15", message:""},
+    {prize:"500 Tickets", message:""},
+    {prize:"Prize 17", message:""},
+    {prize:"Prize 18", message:""},
+    {prize:"Prize 19", message:""},
+    {prize:"Prize 20", message:""}
   ];
-
+  const cat1 = new Set([0, 5, 10, 15])
+  const cat2 = new Set([1, 4, 6, 9, 11, 14, 16, 19])
 
   var svg = d3.select('.wheel')
       .append("svg")
@@ -57,7 +57,11 @@ $(document).ready(() => {
       .attr("class", "slice");
       
   arcs.append("path")
-      .attr("fill", function(d, i){ return color(i); })
+      .attr("fill", function(d, i){ 
+        if (cat1.has(i)) return "#FF0000";
+        else if (cat2.has(i)) return "#BBBBBB";
+        else return "#FF0000";
+      })
       .attr("d", function (d) { return arc(d); });
 
   // add the text
@@ -73,7 +77,6 @@ $(document).ready(() => {
       });
 
   container.on("click", spin);
-
 
   function spin(){
       container.on("click", null);
@@ -94,7 +97,7 @@ $(document).ready(() => {
         .each("end", function(){
           //populate question
           d3.select(".question")
-              .text(prize_data[picked].message);
+              .text("You won " + prize_data[picked].prize + "!");
 
           oldrotation = rotation;
           container.on("click", spin);
@@ -122,7 +125,6 @@ $(document).ready(() => {
       .attr("text-anchor", "middle")
       .text("SPIN")
       .style({"fill":"#BBBBBB", "font-weight":"bold", "font-size":"25px"});
-
 
   function rotTween() {
     var i = d3.interpolate(oldrotation % 360, rotation);
