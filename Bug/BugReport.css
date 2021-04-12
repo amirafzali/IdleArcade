@@ -1,23 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 html{
-    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
     background-size: cover;
     height:100%;
 }
 
 #feedback-page{
 	text-align:center;
+	
 }
 
 #form-main{
 	width:100%;
 	float:left;
 	padding-top:0px;
+	
 }
 
 #form-div {
-	background-color:rgba(72,72,72,0.4);
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
@@ -26,13 +26,21 @@ html{
 	float: left;
 	left: 50%;
 	position: absolute;
-  margin-top:30px;
+  	margin-top:30px;
 	margin-left: -260px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+  	-moz-border-radius: 7px;
+  	-webkit-border-radius: 7px;
+	border: 1px solid lightgray;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
 }
 
 .feedback-input {
+	border: 1px solid lightgray;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+	border-color: rgb(36, 35, 35);
 	color:#3c3c3c;
 	font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
@@ -120,6 +128,7 @@ input:focus, textarea:focus {
 	border: #fbfbfb solid 4px;
 	cursor:pointer;
 	background-color: #3498db;
+	border-radius: 10px;
 	color:white;
 	font-size:24px;
 	padding-top:22px;
@@ -127,13 +136,12 @@ input:focus, textarea:focus {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  	margin-top:-4px;
+  	font-weight:700;
 }
 
 #button-blue:hover{
-	background-color: rgba(0,0,0,0);
-	color: #0493bd;
+	color: #0a2027;
 }
 	
 .submit:hover {
