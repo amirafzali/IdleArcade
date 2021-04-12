@@ -1,38 +1,38 @@
 .header {
     font-weight: 500;
-    font-size: 200%;
+    font-size: 30px;
     color: #BBBBBB;
 }
 #title {
-    margin-bottom: 2%;
-    font-size: 300%;
+    margin-bottom: 25px;
+    font-size: 45px;
 }
 
 .shop-container {
     display: inline-block;
     text-align: center;
     font-family: 'Press Start 2P';
-    padding: 2%;
+    padding: 25px;
     background-color: black;
     user-select: none;
 }
 
 .category-container {
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    padding: 0.25%;
+    padding: 2px;
     background-color: #BBBBBB;
 }
 
 .upgrade-container {
-    margin: 0.3%;
+    margin: 3px;
     padding: 15px;
     background-color: black;
 }
 
 .helper-container {
-    margin: 0.3%;
+    margin: 3px;
     padding: 15px;
     background-color: black;
 }
@@ -43,8 +43,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2.5%;
-    font-size: 95%;
+    margin-top: 15px;
+    font-size: 15px;
     background-color: #BBBBBB;
     border: 3px solid #BBBBBB;
 }
@@ -56,7 +56,7 @@
 .item-button {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 250px;
     padding: 10px;
     margin-right: 3px;
     text-align: left;
@@ -68,7 +68,6 @@
     filter: brightness(2);
 }
 .item-button:active {
-    cursor: pointer;
     filter: brightness(0.5);
 }
 

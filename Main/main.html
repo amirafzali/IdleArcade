@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 	<link rel="stylesheet" href="main.css">
+	<script type = "text/javascript" src="script.js"></script>
 </head>
-<body onload="start()">
+<body>
 <div class="mainContainer">
-	<div class="btnRowDiv">
-		<div class="topButtons" onClick="logout()">Logout</div>
-		<div class="topButtons" onClick="openReportBug()">Report a Bug</div>
-		<div class="topButtons" onClick="openFaq()">FAQ</div>
-		<div class="topButtons" onClick="openLeaderboard()">Leaderboard</div>
+	<div class="arcadeContainer">
+		<div class="btnRowDiv">
+			<div class="topButtons" onClick="logout()">Logout</div>
+			<div class="topButtons" onClick="openReportBug()">Report a Bug</div>
+			<div class="topButtons" onClick="openFaq()">FAQ</div>
+			<div class="topButtons" onClick="openLeaderboard()">Leaderboard</div>
+		</div>
+		<div class="scoreBalanceRowDiv">
+			<div class="mainScreenStats" id="score">Score: <span id="mainScreenScoreInt">0</span></div>
+			<div class="mainScreenStats">Balance: <span id="mainScreenBalanceInt">0</span></div>
+		</div>
+		<div class="arcadeMachine">
+			<img id="machine" src="arcadeMachine.png" alt="Arcade Machine" onclick="addScore()">
+		</div>
 	</div>
-	<div class="scoreBalanceRowDiv">
-		<div class="mainScreenStats" id="score">Score: <span id="mainScreenScoreInt">0</span></div>
-		<div class="mainScreenStats">Balance: <span id="mainScreenBalanceInt">0</span></div>
-	</div>
-	<div class="arcadeMachine">
-		<img id="machine" src="arcadeMachine.png" alt="Arcade Machine" onclick="addScore()">
-	</div>
+	<div class="shopContainer"></div>
+	<div id="ticketShop"></div>
 </div>
-<script type = "text/javascript" src="script.js">
-</script>
+
 </body>
 </html>
