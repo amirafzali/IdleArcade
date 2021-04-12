@@ -6,6 +6,7 @@ const getState = () => {
             score: 0,
             upgrades: {},
             helpers: {},
+            multiplier: 1,
             loggedIn: false,
             username: ""
         }
@@ -17,6 +18,12 @@ const getState = () => {
 
 const updateState = (newState) => {
     localStorage.setItem('state', JSON.stringify(newState))
+}
+
+const incrementMultiplier = (n) => {
+    const state = getState()
+    state.multiplier += n
+    updateState(state)
 }
 
 const addTickets = (n) => {
