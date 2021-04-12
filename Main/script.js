@@ -43,15 +43,15 @@ $(document).ready(() => {
     });
 
     $("#openFaq").on('click', e => {
-        resetState();
+        window.open("../FAQ/FAQ.html");
     });
 
     $("#openLeaderboard").on('click', e => {
-        resetState();
+        window.open("../Leaderboards/leaderboards.html");
     });
 
     $("#logout").on('click', e => {
-        resetState();
+        //resetState();
     });
 
     window.open("/Main/main.html");
