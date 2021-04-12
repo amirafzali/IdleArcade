@@ -20,12 +20,6 @@ const updateState = (newState) => {
     localStorage.setItem('state', JSON.stringify(newState))
 }
 
-const arcadeMachineClick = () => {
-    addTickets(getMultiplier('click'));
-    console.log(getMultiplier('click'));
-}
-
-
 const resetState = () => {
     const newState = {
         balance: 0,
@@ -44,8 +38,6 @@ const addTickets = (n) => {
     state.balance += n
     state.score += n
     updateState(state)
-    document.getElementById("mainScreenScoreInt").innerHTML = getState().score
-    document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance
 }
 
 const removeTickets = (n) => {

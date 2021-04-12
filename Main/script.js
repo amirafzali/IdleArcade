@@ -25,11 +25,21 @@ $(document).ready(() => {
         //addScore(addScore, score);
     }
 
-    function addScore() {
-        score += 1;
-        document.getElementById("mainScreenScoreInt").innerHTML = `<span id="mainScreenScoreInt">${score}</span>`;
+    
+
+    const arcadeMachineClick = () => {
+        addTickets(getMultiplier('click'));
+        updateValues()
     }
 
+    const updateValues = () => {
+        console.log('s')
+        document.getElementById("mainScreenScoreInt").innerHTML = getState().score
+        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance
+    }
+
+    updateValues()
+    
     $("#machine").on('click', e => {
         arcadeMachineClick();
     });
@@ -55,9 +65,7 @@ $(document).ready(() => {
     });
 
     function playMinigame() {
-        //call minigame controller 
-        //var addScore = gets click data from minigame controller
-        //addScore(addScore, score);
+
     }
 
     function logout() {
