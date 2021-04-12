@@ -43,10 +43,10 @@
 }
 
 .btnRowDiv {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
 }
 
 .mainScreenStats{
@@ -58,11 +58,11 @@
 }
 
 .scoreBalanceRowDiv {
-  margin-top: 20px;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
+	margin-top: 50px;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
 }
 
 #ticketShop {
@@ -71,6 +71,7 @@
 
 .arcadeMachine {
   	width:100%;
+	margin-top: 50px;
 	text-align: center;
 }
 

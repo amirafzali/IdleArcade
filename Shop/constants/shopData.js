@@ -58,6 +58,7 @@ const upgrade = {
     upgrade1: {
         name: "Bag of Candies",
         price: "100",
+        for: "helper1",
         effect: {
             description: "Doubles the efficiency of kids.",
             multiplier: 2
@@ -67,6 +68,7 @@ const upgrade = {
     upgrade2: {
         name: "Arcade Bully",
         price: "1,000",
+        for: "helper2",
         effect: {
             description: "Doubles the efficiency of arcade veterans.",
             multiplier: 2
@@ -76,6 +78,7 @@ const upgrade = {
     upgrade3: {
         name: "Baseball Bat",
         price: "10,000",
+        for: "helper3",
         effect: {
             description: "Doubles the efficiency of broken machines.",
             multiplier: 2
@@ -85,6 +88,7 @@ const upgrade = {
     upgrade4: {
         name: "BFFs",
         price: "100,000",
+        for: "helper4",
         effect: {
             description: "Doubles the efficiency of employees.",
             multiplier: 2
@@ -94,6 +98,7 @@ const upgrade = {
     upgrade5: {
         name: "Deep Pockets",
         price: "1,000,000",
+        for: "helper5",
         effect: {
             description: "Doubles the efficiency of branch managers.",
             multiplier: 2
@@ -103,6 +108,7 @@ const upgrade = {
     upgrade6: {
         name: "Sweatshops",
         price: "10,000,000",
+        for: "helper6",
         effect: {
             description: "Doubles the efficiency of ticket factories.",
             multiplier: 2

@@ -7,6 +7,7 @@
 	<script type = "text/javascript" src="script.js"></script>
 </head>
 <body>
+<title>IdleArcade</title>
 <div class="mainContainer">
 	<div class="arcadeContainer">
 		<div class="btnRowDiv">
@@ -20,11 +21,12 @@
 			<div class="mainScreenStats">Balance: <span id="mainScreenBalanceInt">0</span></div>
 		</div>
 		<div class="arcadeMachine">
-			<img id="machine" src="arcadeMachine.png" alt="Arcade Machine" onclick="addScore()">
+			<img id="machine" src="arcadeMachine.png" alt="Arcade Machine" draggable="false" onclick="addScore()">
 		</div>
 	</div>
-	<div class="shopContainer"></div>
-	<div id="ticketShop"></div>
+	<div class="shopContainer">
+		<div id="ticketShop"></div>
+	</div>
 </div>
 
 </body>
