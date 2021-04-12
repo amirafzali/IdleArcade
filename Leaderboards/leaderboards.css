@@ -1,3 +1,12 @@
+* {
+    color: #55EE55;
+    font-family: 'Press Start 2P';
+}
+
+body{
+    background-color: black;
+}
+
 .imagine {
     height: 100vh;
     width: 100vw;
@@ -8,17 +17,17 @@
 
 .leader-container {
     width: 25%;
-    border: 1px solid lightgray;
+    border: 3px solid #BBBBBB;
     padding: 2% 2% 1% 2%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10px;
-    background-color: #BBBBBB;
+    background-color: black;
 }
 
 #leaderTitle {
     text-align: center;
-    color: #125a12;
+    color: #55EE55;
 }
 
 #tableBody {
@@ -47,10 +56,20 @@ tbody {
     overflow: hidden;
 }
 
+div {
+    font-family: 'Press Start 2P';
+    color: #55EE55;
+}
+
+td {
+    font-family: 'Press Start 2P';
+}
+
 tr {
+    font-family: 'Press Start 2P';
     width: 100%;
     display: table;
     table-layout: fixed;
-    color: #125a12;
-    background-color: #BBBBBB;
+    color: #55EE55;
+    background-color: black;
 }
