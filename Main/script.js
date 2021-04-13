@@ -1,18 +1,30 @@
 $(document).ready(() => {
+
+    let buffer = [0, 0, 0, 0, 0]
+    let count = 0
+
     $(function(){
         $("#ticketShop").load("../Shop/shop.html"); 
     });    
 
     const arcadeMachineClick = () => {
         addTickets(getMultiplier('click'));
+        count++
         updateValues()
     }
 
     const updateValues = () => {
-        console.log('s')
+        let avg = (buffer.reduce((tot,e) => tot+e)/buffer.length)
+        console.log(avg)
         document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
         document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
-        document.getElementById("mainScreenTPSInt").innerHTML = getTPS().toFixed(1) + " Tickets Per Second"
+        document.getElementById("mainScreenTPSInt").innerHTML = (getTPS()+avg).toFixed(1) + " Tickets Per Second"
+    }
+
+    const updateTPS = () => {
+        buffer.shift()
+        buffer.push(count)
+        count = 0
     }
 
     $("#authButton").hide()
@@ -25,6 +37,7 @@ $(document).ready(() => {
 
     setInterval(() => {
         addTickets(getTPS())
+        updateTPS()
         updateValues()
     }, 1000)
 
@@ -48,7 +61,7 @@ $(document).ready(() => {
             $("#popup").show()
         }
     }, 60*1000)
-    
+
 
     $("#machine").on('click', e => {
         arcadeMachineClick();
