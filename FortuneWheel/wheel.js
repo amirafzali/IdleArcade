@@ -8,30 +8,33 @@ $(document).ready(() => {
   let spinsLeft = 3;
   let winnings = 0;
 
+  let cat1Prize = Math.round(5 + (2.5 * getTPS())).toLocaleString() + " Tickets"
+  let cat2Prize = Math.round(50 + (20 * getTPS())).toLocaleString() + " Tickets"
+  let cat3Prize = Math.round(10 + (4 * getTPS())).toLocaleString() + " Tickets"
   const prize_data = [
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
     {prize:"3 More Spins", message:""},
-    {prize:"50 Tickets", message:""}, 
-    {prize:"75 Tickets", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
-    {prize:"1,000 Tickets", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
+    {prize: cat1Prize, message:""}, 
+    {prize: cat3Prize, message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
+    {prize: cat2Prize, message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
     {prize:"3 More Spins", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""},
-    {prize:"10,000 Tickets", message:""},
-    {prize:"50 Tickets", message:""},
-    {prize:"75 Tickets", message:""}
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""},
+    {prize: ownsUpgrade("upgrade10") ? (100 + 60 * getTPS()).toLocaleString() + " Tickets" : "Upgrade Clicks", message:""},
+    {prize: cat1Prize, message:""},
+    {prize: cat3Prize, message:""}
   ];
   const cat1 = new Set([0, 3, 5, 8, 10, 13, 15, 18])
-  const cat2 = new Set([2, 7, 12, 17])
+  const cat2 = new Set([2, 7, 12])
 
   var svg = d3.select('.wheel')
       .append("svg")
@@ -62,6 +65,7 @@ $(document).ready(() => {
     .attr("fill", function(d, i){ 
       if (cat1.has(i)) return "#C3B1E1";
       else if (cat2.has(i)) return "#DDD000";
+      else if (i === 17) return "#DD0000"
       else return "#00BBBB"
     })
     .attr("d", function (d) { return arc(d); });
@@ -104,8 +108,10 @@ $(document).ready(() => {
       .each("end", function(){
         //Get prize
         let prizeWon = prize_data[picked].prize;
+        let message = "You won " + prizeWon + "!"
+        if (picked === 17 && !ownsUpgrade("upgrade10")) message += " Your clicks now give 25% of TPS!"
         d3.select(".prize")
-            .text("You won " + prizeWon + "!");
+            .text(message);
         getPrize(prizeWon)
         oldrotation = rotation;
         if (spinsLeft === 0) {
@@ -157,6 +163,9 @@ $(document).ready(() => {
       winnings += amount
       d3.select(".total").style({"display":"block"})
       document.getElementById("winnings").innerHTML = winnings.toLocaleString();
+    }
+    else if (prize.endsWith("Clicks")) {
+      addUpgrade("upgrade10")
     }
     else {
       spinsLeft += 3;

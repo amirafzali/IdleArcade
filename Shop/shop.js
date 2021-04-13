@@ -83,8 +83,8 @@ $(document).ready(() => {
             if (getTickets() >= total) addHelper(item)
         }
         else {
-            total = upgrade[item].price
             if (getTickets() >= total && getNumHelpers(upgrade[item].for) >= 10) {
+                total = upgrade[item].price
                 addUpgrade(item)
                 showMinigame(item)
             }

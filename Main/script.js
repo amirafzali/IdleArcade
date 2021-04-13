@@ -8,7 +8,8 @@ $(document).ready(() => {
     });    
 
     const arcadeMachineClick = () => {
-        addTickets(getMultiplier('click'));
+        if (ownsUpgrade("upgrade10")) addTickets(1 + 0.25*getTPS())
+        else addTickets(getMultiplier('click'))
         count++
         updateValues()
     }

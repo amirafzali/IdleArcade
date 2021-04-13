@@ -209,6 +209,16 @@ const upgradeLookup = {
             description: "Doubles the efficiency of ticket factories.",
             multiplier: 2
         }
+    },
+
+    upgrade10: {
+        name: "Golden Token",
+        price: "0",
+        for: "click",
+        effect: {
+            description: "",
+            multiplier: 10000
+        }
     }
 }
 
