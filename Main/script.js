@@ -16,8 +16,8 @@ $(document).ready(() => {
     const updateValues = () => {
         let avg = (buffer.reduce((tot,e) => tot+e)/buffer.length)
         console.log(avg)
-        document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
-        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
+        document.getElementById("mainScreenScoreInt").innerHTML = Number(getState().score.toFixed(0)).toLocaleString()
+        document.getElementById("mainScreenBalanceInt").innerHTML = Number(getState().balance.toFixed(0)).toLocaleString()
         document.getElementById("mainScreenTPSInt").innerHTML = (getTPS()+avg).toFixed(1) + " Tickets Per Second"
     }
 
