@@ -54,6 +54,7 @@
 }
 
 .mainScreenStats{
+	margin-top: 40px;
 	margin-right: 60px;
   	margin-left: 60px;
   	font-size: 30px;
@@ -62,7 +63,7 @@
 }
 
 .scoreBalanceRowDiv {
-	margin-top: 50px;
+	margin-top: 20px;
 	display: flex;
 	flex-flow: row;
 	align-items: center;

@@ -12,6 +12,7 @@ $(document).ready(() => {
         console.log('s')
         document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
         document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
+        document.getElementById("mainScreenTPSInt").innerHTML = getTPS().toFixed(0) + " Tickets Per Second"
     }
 
     $("#authButton").hide()
