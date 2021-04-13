@@ -2,6 +2,7 @@
     font-weight: 500;
     font-size: 30px;
     color: #BBBBBB;
+    padding-bottom: 15px;
 }
 #title {
     margin-bottom: 25px;
@@ -48,7 +49,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 15px;
     background-color: #BBBBBB;
     border: 3px solid #BBBBBB;
@@ -85,4 +86,14 @@
     font-style: oblique;
     color: #BBBBBB;
     background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #888888;
+}
+::-webkit-scrollbar-thumb {
+    background: #888888;
 }

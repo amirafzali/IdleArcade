@@ -3,8 +3,13 @@ $(document).ready(() => {
     const buildHelpers = () => {
         const category = Object.keys(helper);
         list = ''
-        category.forEach(item => {
-            let entry = '<div class="item-container">\n'
+        category.forEach((item, e) => {
+            let entry = '<div class="item-container"'
+            if (e === category.length) {
+                entry += 'style="margin:none"'
+                console.log(item)
+            }
+            entry += '>\n'
             entry += '<img alt="IMG" class="item-image">\n'
             entry += '<div class="item-button"'
             if (getTickets() < helper[item].price * (1.15**(getNumHelpers(item)))) entry += 'style="color:#888800"'
