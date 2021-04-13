@@ -38,7 +38,7 @@ const registerUser = async (email, username, password, confirm) => {
         return {status: 'err', error: 'A player with that username already exists'}
     }
     try {
-        let create = await auth.createUserWithEmailAndPassword(email, password)
+        let create = await auth.createUserWithEmailAndPassword(email.toLowerCase(), password)
         await db.collection('users').doc(email).set({
             username,
             score: 0,
