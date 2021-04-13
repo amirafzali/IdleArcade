@@ -60,7 +60,7 @@ $(document).ready(() => {
             setMinigamePath(path)
             $("#popup").show()
         }
-    }, 60*1000)
+    }, 90*1000)
 
 
     $("#machine").on('click', e => {
