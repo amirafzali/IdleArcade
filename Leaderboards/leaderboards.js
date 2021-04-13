@@ -8,7 +8,7 @@ $(document).ready(() => {
         for(let user of users.docs) {
             let data = user.data()
             let row = `<tr>
-                <th scope="row">${i}</th>
+                <td style="width: 15%;">${i}</td>
                 <td>${data.username}</td>
                 <td>${data.score}</td>
             </tr>`
