@@ -75,17 +75,21 @@ $(document).ready(() => {
         updateValues()
         updateTPS()
         
-        switch(item) {
-            case 'helper1':
-                window.open("../whackAMole/whackAMole.html");
-            case 'helper2':
-                window.open("../WaterClick/water.html");
-            case 'helper3':
-                window.open("../brickBreaker/index.html");
-            case 'helper4':
-                window.open("../FortuneWheel/wheel.html");
-            case 'helper5':
-                window.open("../Runner/index.html");
+        if (item == 'helper1') {
+            window.open("../whackAMole/whackAMole.html");
+
+        } else if (item == 'helper2') {
+            window.open("../WaterClick/water.html");
+
+        } else if (item == 'helper3') {
+            window.open("../brickBreaker/index.html");
+
+        } else if (item == 'helper4') {
+            window.open("../FortuneWheel/wheel.html");
+
+        } else if (item == 'helper5') {
+            window.open("../Runner/index.html");
+
         }
     }
     buildShop();
