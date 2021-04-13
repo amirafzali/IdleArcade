@@ -27,8 +27,9 @@ $(document).ready(() => {
             $("#winMessage").html(`You won 0 tickets. Did you even play?`)
         } else{
             $("#winMessage").html(`Congrats! You won ${prize[difficulty][level-1]} tickets.`)
+            addTickets(prize[difficulty][level-1])
         }
-        setTimeout(() => window.close(), 5000)
+        setTimeout(() => window.close(), 4000)
     }
     const runGame = () => {
         $("#startSequence").hide()

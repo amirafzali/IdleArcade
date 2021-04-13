@@ -92,10 +92,11 @@ $(document).ready(() => {
             }
         }
 
-        buildShop();
+        
         removeTickets(total)
         updateValues()
         updateTPS()
+        buildShop();
         
 
     }

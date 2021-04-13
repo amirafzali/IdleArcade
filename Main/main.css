@@ -49,7 +49,7 @@
 }
 .topButtons:hover {
     cursor: pointer;
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 .topButtons:active {
     filter: brightness(0.5);
@@ -89,14 +89,14 @@
 }
 
 #machine {
-  	height:900px;
+  	height:650px;
 	text-align: center;
 	top: 50%;
 	left: 50%;
 }
 
 #machine:active{
-	height:450px;
+	height:550px;
 }
 
 #popup {
