@@ -74,10 +74,11 @@ $(document).ready(() => {
         removeTickets(total)
         updateValues()
         updateTPS()
+        console.log(item)
+        if (item == 'helper1') {
+            window.open("../whackAMole/whackAMole.html");
+        }
     }
     buildShop();
-    console.log(item)
-    if (item == 'helper1') {
-        window.open("../whackAMole/whackAMole.html");
-    }
+
 });
