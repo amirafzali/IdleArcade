@@ -74,9 +74,18 @@ $(document).ready(() => {
         removeTickets(total)
         updateValues()
         updateTPS()
-        console.log(item)
-        if (item == 'helper1') {
-            window.open("../whackAMole/whackAMole.html");
+        
+        switch(item) {
+            case 'helper1':
+                window.open("../whackAMole/whackAMole.html");
+            case 'helper2':
+                window.open("../WaterClick/water.html");
+            case 'helper3':
+                window.open("../brickBreaker/index.html");
+            case 'helper4':
+                window.open("../FortuneWheel/wheel.html");
+            case 'helper5':
+                window.open("../Runner/index.html");
         }
     }
     buildShop();
