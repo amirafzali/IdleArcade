@@ -17,7 +17,6 @@ $(document).ready(() => {
         return list
     }
 
-
     const showMinigame = (item) => {
         if (item == 'upgrade1') {
             setMinigamePath("../whackAMole/whackAMole.html")
@@ -32,7 +31,6 @@ $(document).ready(() => {
         }
         $("#popup").show()
     }
-
 
     const updateValues = () => {
         document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
@@ -91,15 +89,17 @@ $(document).ready(() => {
                 showMinigame(item)
             }
         }
-
-        
         removeTickets(total)
         updateValues()
         updateTPS()
         buildShop();
-        
-
+    
     }
+
     buildShop();
 
+    setInterval(() => {
+        buildShop()
+        console.log("built")
+    }, 1000);
 });

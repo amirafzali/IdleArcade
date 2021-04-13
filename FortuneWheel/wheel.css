@@ -1,3 +1,10 @@
+.minigame-container{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+}
+
 .wheel-container{
   display: inline-flex;
   flex-direction: column;
