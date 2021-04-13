@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+* {
+    font-family: 'Press Start 2P';
+}
+
 html{
     background-size: cover;
     height:100%;
@@ -42,9 +46,8 @@ html{
     border-radius: 10px;
 	border-color: rgb(36, 35, 35);
 	color:#3c3c3c;
-	font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-	font-size: 18px;
+  	font-weight:500;
+	font-size: 14px;
 	border-radius: 0;
 	line-height: 22px;
 	background-color: #fbfbfb;
@@ -55,7 +58,7 @@ html{
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-  border: 3px solid rgba(0,0,0,0);
+  	border: 3px solid rgba(0,0,0,0);
 }
 
 .feedback-input:focus{
@@ -64,7 +67,7 @@ html{
 	border: 3px solid #3498db;
 	color: #3498db;
 	outline: none;
-  padding: 13px 13px 13px 54px;
+  	padding: 13px 13px 13px 54px;
 }
 
 .focused{
@@ -122,7 +125,6 @@ input:focus, textarea:focus {
 }
 
 #button-blue{
-	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	float:left;
 	width: 100%;
 	border: #fbfbfb solid 4px;
@@ -130,7 +132,7 @@ input:focus, textarea:focus {
 	background-color: #3498db;
 	border-radius: 10px;
 	color:white;
-	font-size:24px;
+	font-size: 20px;
 	padding-top:22px;
 	padding-bottom:22px;
 	-webkit-transition: all 0.3s;
@@ -173,4 +175,30 @@ input:focus, textarea:focus {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+}
+
+.topButtons {
+	outline-color: blue;
+	border-radius: 20px;
+	color: black;
+	background-color: #BBBBBB;
+	height: 20px;
+	width: 200px;
+	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	vertical-align: middle;
+  	margin-right: 25px;
+  	margin-left: 25px;
+  	padding: 15px 10px 15px 10px;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.title {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
 }
