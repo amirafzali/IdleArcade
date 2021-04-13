@@ -57,6 +57,18 @@ td {
 }
 
 .score {
+    margin: auto;
+    margin-top: 2vw;
+    background-color:red;
+    width: 10vw;
+    text-align: center; 
+    font-size: 2vw;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tickets {
     float: right;
     margin-top: -15vh;
     background-color:red;
