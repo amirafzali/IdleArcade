@@ -158,7 +158,7 @@ $(document).ready(() => {
   }
 
   const getPrize = (prize) => {
-    if (prize.endsWith("Tickets")) {
+    if (prize.endsWith("Tix")) {
       let amount = Number(prize.split(" ")[0].replace(/,/g, ""));
       winnings += amount
       d3.select(".total").style({"display":"block"})
