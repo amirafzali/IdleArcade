@@ -15,11 +15,11 @@ function startGame() {
     popOut();
     setTimeout(function() {
         gameOver = true;
-        addScore(score);
         for (var i=0; i < holes.length; i++) {
             holes[i].classList.add('hide');
         }
         document.getElementById('gameover').classList.remove('hide');
+        addTickets(score);
     }, 
     //the timeout of the game in milliseconds 10000 (10s)
     10000);
