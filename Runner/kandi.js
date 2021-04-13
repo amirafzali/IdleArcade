@@ -540,6 +540,9 @@
     if (player.y + player.height >= canvas.height) {
       gameOver();
     }
+    else{
+      setTimeout(TimeOver, 10000);
+    }
   }
 
   /**
@@ -750,8 +753,15 @@
   function gameOver() {
     stop = true;
     document.getElementById('game-over').style.display = 'block';
+    //window.location.href = './Main/main.html';
+    window.close();
   }
 
+  function TimeOver(){
+    alert("Times Up!");
+    gameOver();
+  }
+  
   document.getElementById('restart').addEventListener('click', startGame);
 
   assetLoader.downloadAll();
