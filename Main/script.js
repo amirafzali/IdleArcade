@@ -6,7 +6,7 @@ $(document).ready(() => {
     $("#ticketShop").load("../Shop/shop.html");     
 
     const arcadeMachineClick = () => {
-        if (ownsUpgrade("upgrade10")) addTickets(1 + 0.15*getTPS())
+        if (ownsUpgrade("upgrade10")) addTickets(1 + 0.05*getTPS())
         else addTickets(getMultiplier('click'))
         count++
         updateValues()
@@ -16,7 +16,7 @@ $(document).ready(() => {
         let avg = (buffer.reduce((tot,e) => tot+e)/buffer.length)
         document.getElementById("mainScreenScoreInt").innerHTML = Number(getState().score.toFixed(0)).toLocaleString()
         document.getElementById("mainScreenBalanceInt").innerHTML = Number(getState().balance.toFixed(0)).toLocaleString()
-        document.getElementById("mainScreenTPSInt").innerHTML = (getTPS()*(1 + avg*0.15)).toFixed(1) + " Tickets Per Second"
+        document.getElementById("mainScreenTPSInt").innerHTML = (getTPS()*(1 + avg*0.05)).toFixed(1) + " Tickets Per Second"
     }
 
     const updateTPS = () => {
