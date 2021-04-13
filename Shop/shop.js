@@ -89,7 +89,6 @@ $(document).ready(() => {
 
         } else if (item == 'helper5') {
             window.open("../Runner/index.html");
-
         }
     }
     buildShop();

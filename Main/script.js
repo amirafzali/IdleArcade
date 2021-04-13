@@ -16,6 +16,7 @@ $(document).ready(() => {
     }
 
     $("#authButton").hide()
+    $("#popup").hide()
     
     updateValues()
     setInterval(toggleAuth, 2000)
@@ -69,6 +70,10 @@ $(document).ready(() => {
             window.open("../Login/auth.html");
         }
     });
+
+    $("#popupNo").click(() => {
+        $("#popup").hide()
+    })
 
     function toggleAuth() {
         console.log('s')
