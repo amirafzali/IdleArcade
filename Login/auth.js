@@ -13,6 +13,9 @@ $(document).ready(() => {
     inputChanges()
     formSubmits()
 
+    setTimeout(() => {
+        if(auth.currentUser) window.close();
+    }, 2000)
 
     function resetFields() {
         let allFields = ['loginEmail', 'registerEmail', 'resetEmail', 'loginPassword', 'registerPassword', 'registerUsername', 'registerConfirm']
@@ -102,6 +105,7 @@ $(document).ready(() => {
                 setError(res.error)
             } else {
                 setSuccess("Successfully logged in!")
+                window.close();
             }            
         })
 
