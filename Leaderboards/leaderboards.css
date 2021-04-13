@@ -5,6 +5,7 @@
 
 body{
     background-color: black;
+    overflow: hidden
 }
 
 .imagine {
@@ -13,6 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: none;
 }
 
 .leader-container {
@@ -23,6 +25,8 @@ body{
     transition: 0.3s;
     border-radius: 10px;
     background-color: black;
+    margin-top: -6%;
+    
 }
 
 #leaderTitle {

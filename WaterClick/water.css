@@ -8,26 +8,76 @@ h1 {
 .water-container {
     width: 100vw;
     height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("bckg2.jpg");
+    background-size: cover;
+}
+
+#initialTitle {
+    font-size: 40px;
+}
+
+#diffSelection {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(109, 109, 109);
+}
+
+#waterGame {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#actionRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 8%;
 }
 
 #glass {
-    width: 20vw;
-    height: 10vh;
+    width: 9vw;
+    height: 9vh;
+    margin-left: 8%;
+}
+
+#waterButton {
+    height: 40%;
+    padding-top: 5%;
+}
+
+#waterButton:active {
+    height: 35%;
 }
 
 .section {
     border: 1px solid black;
     height: 100%;
     width: 100%;
+    background-color: white;
+}
+
+.gold {
+    height: 50%;
+    background-color: yellow;
+    border: 1px solid rgb(235, 223, 60)
+}
+
+.blue {
+    background-color: lightskyblue;
 }
 
 .diff-btn {
-    background-color: lightsalmon;
     border: none;
     color: white;
     padding: 20px;
@@ -42,10 +92,35 @@ h1 {
     margin-right: 20px;
 }
 
+#easyButton {
+    background-color: rgb(66, 129, 66);
+}
+
+#easyButton:active {
+    background-color: rgb(165, 78, 78);
+}
+
+#mediumButton {
+    background-color: rgb(122, 122, 59);
+}
+
+#mediumButton:active {
+    background-color: rgb(165, 78, 78);
+}
+
+#hardButton {
+    background-color: red;
+}
+
+#hardButton:active {
+    background-color: rgb(165, 78, 78);
+}
+
 .diff-btn:hover {
     cursor: pointer;
 }
 
-.diff-btn:active {
-    background-color: rgb(165, 78, 78);
+.seqMessage {
+    padding-top: 3%;
 }
+

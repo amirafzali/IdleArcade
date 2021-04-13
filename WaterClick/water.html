@@ -5,20 +5,44 @@
 </head>
 <body>
     <div class="water-container">
-        <h1 id="initialTitle">Please Select The Difficulty</h1>
-        <div id="difficultyButtons">
-            <button class="diff-btn" id="easyButton">Easy</button>
-            <button class="diff-btn" id="mediumButton">Medium</button>
-            <button class="diff-btn" id="hardButton">Hard</button>
+        <div id="diffSelection">
+            <h1 id="initialTitle">Please Select The Difficulty</h1>
+            <div id="difficultyButtons">
+                <button class="diff-btn" id="easyButton">Easy</button>
+                <button class="diff-btn" id="mediumButton">Medium</button>
+                <button class="diff-btn" id="hardButton">Hard</button>
+            </div>
         </div>
 
-        <div id="glass">
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-        </div>
+        <div id="waterGame">
+            <div id="startSequence" class="seqMessage">
+                <h1>Start clicking the target as fast as you can</h1>
+                <h1 id="initialCounter">Game starts in 5...</h1>
+            </div>
 
+            <div id="gameMessages" class="seqMessage" hidden>
+                <h1 id="statsMessage">Clicks: 0 | Level: 0</h1>
+                <h1 id="timeLeftMessage">Time left: 20 seconds</h1>
+            </div>
+
+            <div id="endMessage" class="seqMessage" hidden>
+                <h1 id="winMessage">Congrats! You won 10 tickets.</h1>
+                <h1>You will go back to the game in a few moments...</h1>
+            </div>
+            
+            <div id="actionRow">
+                <img id="waterButton" src="button.png" draggable="false" ondragstart="return false">
+                <div id="glass">
+                    <div class="section gold"></div>
+                    <div id="s4" class="section"></div>
+                    <div id="s3" class="section"></div>
+                    <div id="s2" class="section"></div>
+                    <div id="s1" class="section"></div>
+                    <div id="s0" class="section"></div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 </body>
