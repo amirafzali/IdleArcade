@@ -6,6 +6,7 @@
     <style>* { padding: 0; margin: 0; } canvas { background: #eee; display: block; margin: 0 auto; }
         .center {margin: auto; padding:10px }
     </style>
+    <script src="../data.js"></script>
 </head>
 <body>
 
@@ -78,7 +79,8 @@
                         b.status = 0;
                         score++;
                         if(score == brickRowCount*brickColumnCount) {
-                            alert("YOU WIN, CONGRATS!");
+                            alert("YOU WON 75 Tickets, CONGRATS!");
+                            addTickets(75);
                             window.close();
                         }
                     }
