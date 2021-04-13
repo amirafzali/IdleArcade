@@ -69,11 +69,14 @@ $(document).ready(() => {
             total = upgrade[item].price
             if (getTickets() >= total && getNumHelpers(upgrade[item].for) >= 10) addUpgrade(item)
         }
+
         buildShop();
         removeTickets(total)
         updateValues()
         updateTPS()
     }
-
     buildShop();
+    if (item == 'helper1') {
+        window.open("../whackAMole/whackAMole.html");
+    }
 });
