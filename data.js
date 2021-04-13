@@ -7,7 +7,6 @@ const getState = () => {
             upgrades: {},
             helpers: {},
             multipliers: {'click': 1},
-            loggedIn: false,
             username: ""
         }
         updateState(newState)

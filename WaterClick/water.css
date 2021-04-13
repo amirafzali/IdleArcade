@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    color: white;
+}
+.water-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(109, 109, 109);
+}
+
+#glass {
+    width: 20vw;
+    height: 10vh;
+}
+
+.section {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.diff-btn {
+    background-color: lightsalmon;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid lightcoral;
+    margin-right: 20px;
+}
+
+.diff-btn:hover {
+    cursor: pointer;
+}
+
+.diff-btn:active {
+    background-color: rgb(165, 78, 78);
+}
