@@ -15,7 +15,7 @@ function startGame() {
     popOut();
     setTimeout(function() {
         gameOver = true;
-        //send the score to the main game
+        addScore(score);
         for (var i=0; i < holes.length; i++) {
             holes[i].classList.add('hide');
         }
@@ -40,11 +40,11 @@ function popOut() {
 
 function addScore() {
     mole.classList.remove('pop');
-    score += 1;
+    score += 10;
     scoreNode.innerHTML = score;
 }
 
-function returnToMain(){
-    console.log("Return");
+function closeGame(){
+    window.close()
 }
 
