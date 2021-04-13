@@ -753,12 +753,11 @@
   function gameOver() {
     stop = true;
     document.getElementById('game-over').style.display = 'block';
-    alert("Oooops Try Again?");
+    alert("Game Over! \n\n" + score + " tickeks have been collected successfully!");
     window.close();
   }
 
   function TimeOver(){
-    alert("Times Up!");
     gameOver();
   }
  
