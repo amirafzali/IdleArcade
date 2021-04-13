@@ -76,6 +76,7 @@ $(document).ready(() => {
         updateTPS()
     }
     buildShop();
+    console.log(item)
     if (item == 'helper1') {
         window.open("../whackAMole/whackAMole.html");
     }
