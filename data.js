@@ -7,7 +7,8 @@ const getState = () => {
             upgrades: {},
             helpers: {},
             multipliers: {'click': 1},
-            username: ""
+            username: "",
+            tps: 0
         }
         updateState(newState)
     }
@@ -27,7 +28,8 @@ const resetState = () => {
         helpers: {},
         multipliers: {'click': 1},
         loggedIn: false,
-        username: ""
+        username: "",
+        tps: 0
     }
     updateState(newState)
 }
@@ -83,6 +85,7 @@ const addUpgradeMultiplier = (upgrade) => {
     }
 
     state.multipliers[f]*=m
+    updateState(state)
 }
 
 const addHelper = (helper) => {
@@ -110,9 +113,29 @@ const getUsername = () => {
 
 const getMultiplier = (m) => {
     const state = getState()
-    if(!(m in state.multipliers)) return 0
+    if(!(m in state.multipliers)) return 1
     return state.multipliers[m]
 }
+
+const getTPS = () => {
+    const state = getState()
+    console.log(state.tps)
+    return state.tps
+}
+
+const updateTPS = () => {
+    const state = getState();
+    build = 0
+    for(let helper of Object.keys(getHelpers())) 
+    {
+        let number = getHelpers()[helper]
+        let comp = number*helperLookup[helper].effect.tps*getMultiplier(helper)
+        build+=comp
+    }
+    state['tps'] = build
+    updateState(state)
+}
+
 
 const upgradeLookup = {
     upgrade1: {
@@ -172,6 +195,62 @@ const upgradeLookup = {
         effect: {
             description: "Doubles the efficiency of ticket factories.",
             multiplier: 2
+        }
+    }
+}
+
+const helperLookup = {
+    helper1: {
+        name: "Kid",
+        price: 10,
+        effect: {
+            description: "Recruit a kid to collect arcade tickets for you.",
+            tps: 0.1
+        }
+    },
+
+    helper2: {
+        name: "Arcade Veteran",
+        price: 100,
+        effect: {
+            description: "Recruit an arcade veteran to collect even more arcade tickets for you.",
+            tps: 1
+        }
+    },
+
+    helper3: {
+        name: "Broken Machine",
+        price: 1000,
+        effect: {
+            description: "Break open an arcade machine and pocket the tickets inside.",
+            tps: 10
+        }
+    },
+
+    helper4: {
+        name: "Employee",
+        price: 10000,
+        effect: {
+            description: "Become friends with an employee so they'll give you arcade tickets directly.",
+            tps: 50
+        }
+    },
+
+    helper5: {
+        name: "Branch Manager",
+        price: 100000,
+        effect: {
+            description: "Bribe a branch manager to give you his entire stock of tickets.",
+            tps: 250
+        }
+    },
+
+    helper6:{
+        name: "Ticket Factory",
+        price: 1000000,
+        effect: {
+            description: "Build a factory that produces arcade tickets automatically.",
+            tps: 1250
         }
     }
 }

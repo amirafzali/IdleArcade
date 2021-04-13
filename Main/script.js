@@ -10,8 +10,8 @@ $(document).ready(() => {
 
     const updateValues = () => {
         console.log('s')
-        document.getElementById("mainScreenScoreInt").innerHTML = getState().score
-        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance
+        document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
+        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
     }
 
     $("#authButton").hide()
@@ -19,6 +19,10 @@ $(document).ready(() => {
     updateValues()
     setInterval(toggleAuth, 2000)
 
+    setInterval(() => {
+        addTickets(getTPS())
+        updateValues()
+    }, 1000)
     
 
     $("#machine").on('click', e => {
@@ -28,6 +32,7 @@ $(document).ready(() => {
     $("#reset").on('click', e => {
         resetState();
         updateValues()
+        location.reload()
     });
 
     $("#openReportBug").on('click', e => {

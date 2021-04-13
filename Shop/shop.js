@@ -15,6 +15,11 @@ $(document).ready(() => {
         return list
     }
 
+    const updateValues = () => {
+        document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
+        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
+    }
+
     const buildUpgrades = () => {
         const category = Object.keys(upgrade);
         list = ''
@@ -62,6 +67,8 @@ $(document).ready(() => {
         }
         buildShop();
         removeTickets(total)
+        updateValues()
+        updateTPS()
     }
 
     buildShop();
