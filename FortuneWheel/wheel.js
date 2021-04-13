@@ -8,9 +8,9 @@ $(document).ready(() => {
   let spinsLeft = 3;
   let winnings = 0;
 
-  let cat1Prize = Math.round(5 + (2.5 * getTPS())).toLocaleString() + " Tickets"
-  let cat2Prize = Math.round(50 + (20 * getTPS())).toLocaleString() + " Tickets"
-  let cat3Prize = Math.round(10 + (4 * getTPS())).toLocaleString() + " Tickets"
+  let cat1Prize = Math.round(5 + (5 * getTPS())).toLocaleString() + " Tickets"
+  let cat2Prize = Math.round(50 + (50 * getTPS())).toLocaleString() + " Tickets"
+  let cat3Prize = Math.round(10 + (10 * getTPS())).toLocaleString() + " Tickets"
   const prize_data = [
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""},
@@ -29,7 +29,7 @@ $(document).ready(() => {
     {prize: cat3Prize, message:""},
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""},
-    {prize: ownsUpgrade("upgrade10") ? (100 + 60 * getTPS()).toLocaleString() + " Tickets" : "Upgrade Clicks", message:""},
+    {prize: ownsUpgrade("upgrade10") ? (100 + 100 * getTPS()).toLocaleString() + " Tickets" : "Upgrade Clicks", message:""},
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""}
   ];

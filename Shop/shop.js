@@ -6,7 +6,7 @@ $(document).ready(() => {
         category.forEach((item, e) => {
             let entry = '<div class="item-container"'
             if (e === category.length) {
-                entry += 'style="margin:none"'
+                entry += 'style="margin-bottom: 0px"'
                 console.log(item)
             }
             entry += '>\n'
