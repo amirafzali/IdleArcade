@@ -67,6 +67,11 @@ const getUpgrades = () => {
     return state.upgrades
 }
 
+const ownsUpgrade = (upgrade) => {
+    const state = getState()
+    return (state.upgrades[upgrade])
+}
+
 const addUpgradeMultiplier = (upgrade) => {
     const state = getState()
     let need = upgradeLookup[upgrade]

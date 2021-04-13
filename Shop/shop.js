@@ -1,54 +1,67 @@
 $(document).ready(() => {
 
-    const createCategory = data => {
-        const category = Object.keys(data);
+    const buildHelpers = () => {
+        const category = Object.keys(helper);
         list = ''
         category.forEach(item => {
             let entry = '<div class="item-container">\n'
             entry += '<img alt="IMG" class="item-image">\n'
             entry += `<div class="item-button" id=${item}>\n`
-            entry += `<div id=${item} >${data[item].name}</div>\n`;
-            entry += `<div id=${item}>${data[item].price}TX</div>\n</div>\n`; //REPLACE WITH CALCULATED PRICE 1.15
-            //DISPLAY AMOUNT OWNED
-            entry += `<div class="item-desc">${data[item].effect.description}</div>\n</div>`;
+            entry += `<div id=${item}>${helper[item].name}</div>\n`;
+            entry += `<div id=${item}>${Math.round(helper[item].price * (1.15**(getNumHelpers(item))))}TX ${getNumHelpers(item)}</div>\n</div>\n`;
+            entry += `<div class="item-desc">${helper[item].effect.description}</div>\n</div>`;
             list += entry;
         });
         return list
     }
 
-    const updateHelper = helper => {
-        //EDIT HELPER NUMBER and PRICE
+    const buildUpgrades = () => {
+        const category = Object.keys(upgrade);
+        list = ''
+        category.forEach(item => {
+            let entry = '<div class="item-container">\n'
+            entry += '<img alt="IMG" class="item-image">\n'
+            entry += '<div class="item-button"'
+            if (ownsUpgrade(item)) entry += 'style="color:#FF0000"'
+            else if (getNumHelpers(upgrade[item].for) < 10) entry += 'style="color:#333333"'
+            entry += `id=${item}>\n`
+            if (ownsUpgrade(item)) {
+                entry += `<div id=${item}>SOLD OUT</div>\n`;
+                entry += `<div id=${item}>FOREVER</div>\n</div>\n`;
+            }
+            else{
+                entry += `<div id=${item}>${upgrade[item].name}</div>\n`;
+                entry += `<div id=${item}>${upgrade[item].price}TX</div>\n</div>\n`;
+            }
+            if (getNumHelpers(upgrade[item].for) < 10) entry += `<div class="item-desc">Own at least 10 ${helper[upgrade[item].for].name}s to unlock this upgrade</div>\n</div>`;
+            else entry += `<div class="item-desc">${upgrade[item].effect.description}</div>\n</div>`;
+            list += entry;
+        });
+        return list
     }
 
-    const updateUpgrade = upgrade => {
-        //REMOVE UPGRADE FROM STORE
-    }
-
-    const deductBalance = total => {
-        //DEDUCT
-        console.log(total)
+    const buildShop = () => {
+        document.getElementById("helperList").innerHTML = buildHelpers();
+        document.getElementById("upgradeList").innerHTML = buildUpgrades();
+        $(".item-button").on('click', e => {
+            itemID = e.target.id
+            processRequest(itemID)
+        });
     }
 
     const processRequest = item => {
         let total = 0
         if (helper.hasOwnProperty(item)) {
-            total = Number(helper[item].price.replace(/,/g, '')) //REPLACE WITH CALCULATED PRICE
-            console.log("isHelper")
-            updateHelper(item)
+            total = Math.round(helper[item].price * (1.15**(getNumHelpers(item))))
+            addHelper(item)
         }
         else {
-            total = Number(upgrade[item].price.replace(/,/g, ''))
-            console.log("isUpgrade")
-            updateUpgrade(item)
+            total = upgrade[item].price
+            addUpgrade(item)
         }
-        deductBalance(total)
+        buildShop();
+        removeTickets(total)
     }
 
-    document.getElementById("helperList").innerHTML = createCategory(helper);
-    document.getElementById("upgradeList").innerHTML = createCategory(upgrade);
-
-    $(".item-button").on('click', e => {
-        itemID = e.target.id
-        processRequest(itemID)
-    });
+    buildShop();
 });
