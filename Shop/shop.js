@@ -34,6 +34,7 @@ $(document).ready(() => {
                 entry += `<div id=${item}>${upgrade[item].price}TX</div>\n</div>\n`;
             }
             if (getNumHelpers(upgrade[item].for) < 10) entry += `<div class="item-desc">Own at least 10 ${helper[upgrade[item].for].name}s to unlock this upgrade</div>\n</div>`;
+            else if (ownsUpgrade(item)) entry += `<div class="item-desc">We'll restock when we feel like it.</div>\n</div>`;
             else entry += `<div class="item-desc">${upgrade[item].effect.description}</div>\n</div>`;
             list += entry;
         });
@@ -53,11 +54,11 @@ $(document).ready(() => {
         let total = 0
         if (helper.hasOwnProperty(item)) {
             total = Math.round(helper[item].price * (1.15**(getNumHelpers(item))))
-            addHelper(item)
+            if (getTickets() >= total) addHelper(item)
         }
         else {
             total = upgrade[item].price
-            addUpgrade(item)
+            if (getTickets() >= total && getNumHelpers(upgrade[item].for) >= 10) addUpgrade(item)
         }
         buildShop();
         removeTickets(total)
