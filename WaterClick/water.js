@@ -1,4 +1,3 @@
-window.close()
 $(document).ready(() => {
     let difficulty = "";
     let clicks = 0;
@@ -30,6 +29,7 @@ $(document).ready(() => {
             $("#winMessage").html(`Congrats! You won ${prize[difficulty][level-1]} tickets.`)
             addTickets(prize[difficulty][level-1])
         }
+        setTimeout(()=> window.close(), 4000)
     }
     const runGame = () => {
         $("#startSequence").hide()
