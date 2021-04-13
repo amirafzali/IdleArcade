@@ -21,7 +21,7 @@ svg {
   background-color: black;
 }
 
-.question{
+.prize{
   width: 700px;
   height: 100px;
   margin-top: 75px;
@@ -32,4 +32,17 @@ svg {
   transform:translate(0,-50%);
   color: #BBBBBB;
   background-color: black;
+}
+
+.total {
+  width: 700px;
+  height: 100px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  transform:translate(0,-50%);
+  color: #55EE55;
+  background-color: black;
+  display: none;
 }
