@@ -753,7 +753,7 @@
   function gameOver() {
     stop = true;
     document.getElementById('game-over').style.display = 'block';
-    //window.location.href = './Main/main.html';
+    alert("Oooops Try Again?");
     window.close();
   }
 
@@ -761,7 +761,7 @@
     alert("Times Up!");
     gameOver();
   }
-  
+ 
   document.getElementById('restart').addEventListener('click', startGame);
 
   assetLoader.downloadAll();
