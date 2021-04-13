@@ -3,9 +3,7 @@ $(document).ready(() => {
     let buffer = [0, 0, 0, 0, 0]
     let count = 0
 
-    $(function(){
-        $("#ticketShop").load("../Shop/shop.html"); 
-    });    
+    $("#ticketShop").load("../Shop/shop.html");     
 
     const arcadeMachineClick = () => {
         if (ownsUpgrade("upgrade10")) addTickets(1 + 0.25*getTPS())
