@@ -211,6 +211,36 @@ const upgradeLookup = {
         }
     },
 
+    upgrade7: {
+        name: "Globalization",
+        price: "200,000,000",
+        for: "helper6",
+        effect: {
+            description: "Doubles the efficiency of arcade CEOs.",
+            multiplier: 2
+        }
+    },
+
+    upgrade8: {
+        name: "Full Metal Alchemist",
+        price: "3,000,000,000",
+        for: "helper6",
+        effect: {
+            description: "Doubles the efficiency of alchemy.",
+            multiplier: 2
+        }
+    },
+
+    upgrade9: {
+        name: "Intergalactic",
+        price: "50,000,000,000",
+        for: "helper6",
+        effect: {
+            description: "Doubles the efficiency of ticket aliens.",
+            multiplier: 2
+        }
+    },
+
     upgrade10: {
         name: "Golden Token",
         price: "0",
@@ -275,5 +305,32 @@ const helperLookup = {
             description: "Build a factory that produces arcade tickets automatically.",
             tps: 1250
         }
-    }
+    },
+
+    helper7:{
+        name: "Arcade CEO",
+        price: 20000000,
+        effect: {
+            description: "Befriend a CEO of an arcade companies, giving you access to all tickets in their posession.",
+            tps: 10000
+        }
+    },
+
+    helper8:{
+        name: "Alchemy",
+        price: 300000000,
+        effect: {
+            description: "Transmute worthless items like gold into more arcade tickets.",
+            tps: 50000
+        }
+    },
+
+    helper9:{
+        name: "Aliens",
+        price: 5000000000,
+        effect: {
+            description: "Otherwordly societies grant you their supply of arcade tickets.",
+            tps: 275000
+        }
+    },
 }
