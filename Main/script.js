@@ -23,6 +23,16 @@ $(document).ready(() => {
         addTickets(getTPS())
         updateValues()
     }, 1000)
+
+    setInterval(async () => {
+        if(auth.currentUser) {
+            let email = auth.currentUser.email;
+            let doc = await db.collection('users').doc(email).get()
+            if(doc.exists && getScore() > doc.data().score) {
+                await db.collection('users').doc(email).update({'score': Number(getScore().toFixed(0))})
+            }
+        }
+    }, 30000)
     
 
     $("#machine").on('click', e => {
