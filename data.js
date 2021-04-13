@@ -8,7 +8,7 @@ const getState = () => {
             helpers: {},
             multipliers: {'click': 1},
             username: "",
-            tps: 0
+            tps: 0.0
         }
         updateState(newState)
     }
@@ -29,7 +29,7 @@ const resetState = () => {
         multipliers: {'click': 1},
         loggedIn: false,
         username: "",
-        tps: 0
+        tps: 0.0
     }
     updateState(newState)
 }
