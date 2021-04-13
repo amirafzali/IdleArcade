@@ -1,5 +1,4 @@
 $(document).ready(() => {
-    console.log('s')
     $("#registerForm").hide()
     $("#resetForm").hide()
 

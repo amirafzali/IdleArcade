@@ -100,6 +100,5 @@ $(document).ready(() => {
 
     setInterval(() => {
         buildShop()
-        console.log("built")
     }, 1000);
 });

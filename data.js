@@ -121,7 +121,6 @@ const getMultiplier = (m) => {
 
 const getTPS = () => {
     const state = getState()
-    console.log(state.tps)
     return state.tps
 }
 
