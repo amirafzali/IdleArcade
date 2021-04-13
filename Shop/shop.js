@@ -17,6 +17,23 @@ $(document).ready(() => {
         return list
     }
 
+
+    const showMinigame = (item) => {
+        if (item == 'upgrade1') {
+            setMinigamePath("../whackAMole/whackAMole.html")
+        } else if (item == 'upgrade2') {
+            setMinigamePath("../WaterClick/water.html")
+        } else if (item == 'upgrade3') {
+            setMinigamePath("../brickBreaker/index.html")
+        } else if (item == 'upgrade4') {
+            setMinigamePath("../FortuneWheel/wheel.html")
+        } else if (item == 'upgrade5') {
+            setMinigamePath("../Runner/index.html")
+        }
+        $("#popup").show()
+    }
+
+
     const updateValues = () => {
         document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
         document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
@@ -60,6 +77,8 @@ $(document).ready(() => {
     }
 
     const processRequest = item => {
+        if(getMinigamePath()) return
+
         let total = 0
         if (helper.hasOwnProperty(item)) {
             total = Math.round(helper[item].price * (1.15**(getNumHelpers(item))))
@@ -67,7 +86,10 @@ $(document).ready(() => {
         }
         else {
             total = upgrade[item].price
-            if (getTickets() >= total && getNumHelpers(upgrade[item].for) >= 10) addUpgrade(item)
+            if (getTickets() >= total && getNumHelpers(upgrade[item].for) >= 10) {
+                addUpgrade(item)
+                showMinigame(item)
+            }
         }
 
         buildShop();
@@ -75,21 +97,7 @@ $(document).ready(() => {
         updateValues()
         updateTPS()
         
-        if (item == 'helper1') {
-            window.open("../whackAMole/whackAMole.html");
 
-        } else if (item == 'helper2') {
-            window.open("../WaterClick/water.html");
-
-        } else if (item == 'helper3') {
-            window.open("../brickBreaker/index.html");
-
-        } else if (item == 'helper4') {
-            window.open("../FortuneWheel/wheel.html");
-
-        } else if (item == 'helper5') {
-            window.open("../Runner/index.html");
-        }
     }
     buildShop();
 

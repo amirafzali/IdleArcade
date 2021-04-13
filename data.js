@@ -8,7 +8,8 @@ const getState = () => {
             helpers: {},
             multipliers: {'click': 1},
             username: "",
-            tps: 0.0
+            tps: 0.0,
+            minigamePath: ""
         }
         updateState(newState)
     }
@@ -29,7 +30,8 @@ const resetState = () => {
         multipliers: {'click': 1},
         loggedIn: false,
         username: "",
-        tps: 0.0
+        tps: 0.0,
+        minigamePath: ""
     }
     updateState(newState)
 }
@@ -136,6 +138,17 @@ const updateTPS = () => {
     updateState(state)
 }
 
+
+const getMinigamePath = () => {
+    const state = getState()
+    return state.minigamePath
+}
+
+const setMinigamePath = (path) => {
+    const state = getState()
+    state.minigamePath = path
+    updateState(state)
+}
 
 const upgradeLookup = {
     upgrade1: {

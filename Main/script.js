@@ -17,6 +17,8 @@ $(document).ready(() => {
 
     $("#authButton").hide()
     $("#popup").hide()
+
+    setMinigamePath("")
     
     updateValues()
     setInterval(toggleAuth, 2000)
@@ -35,6 +37,17 @@ $(document).ready(() => {
             }
         }
     }, 30000)
+
+
+    setInterval(() => {
+        if(!getMinigamePath()) {
+            let paths = ["../whackAMole/whackAMole.html", "../WaterClick/water.html", 
+                        "../brickBreaker/index.html", "../FortuneWheel/wheel.html", "../Runner/index.html"]
+            let path = paths[Math.floor(Math.random()*paths.length)]
+            setMinigamePath(path)
+            $("#popup").show()
+        }
+    }, 60*1000)
     
 
     $("#machine").on('click', e => {
@@ -71,8 +84,16 @@ $(document).ready(() => {
         }
     });
 
+    $("#popupYes").click(() => {
+        if(getMinigamePath()) {
+            $("#popup").hide()
+            window.open(getMinigamePath())
+            setMinigamePath("")
+        }
+    })
     $("#popupNo").click(() => {
         $("#popup").hide()
+        setMinigamePath("")
     })
 
     function toggleAuth() {
@@ -84,4 +105,5 @@ $(document).ready(() => {
             $("#authButton").html("Login")
         }
     }
+
 });
