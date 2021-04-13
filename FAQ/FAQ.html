@@ -8,19 +8,18 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/30c21ac8e0.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+
 </head>
 <body>
+<div class="topButtons" onClick="closeWindow()">Return To Game</div>
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<p class="my-5"><a href="\Main\main.html"><img src="./assets/logo.png" alt="logo" class="img-fluid d-block mx-auto"/></a></p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">
 			<ul class="nav nav-tabs">
-				<li ><a data-toggle="tab" href="#tab1" aria-selected="true" class="active">About IdleArcade</a></li>
-				<li><a data-toggle="tab" href="#tab2" aria-selected="false">How to...?</a></li>
+				<li ><a data-toggle="tab" href="#tab1" aria-selected="true" class="active">About Idle Arcade</a></li>
+				<li><a data-toggle="tab" href="#tab2" aria-selected="false">How to play</a></li>
 			</ul>
 		</div>
 	</div>
@@ -114,6 +113,11 @@
 		</div>
 	</div>
 </div>	
+<script>
+	function closeWindow() {
+		window.close()
+	}
+</script>
 
 	</body>
 </html>

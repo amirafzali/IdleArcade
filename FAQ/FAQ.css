@@ -1,9 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-img{
-	display: inline-block;
-	height: 50px;
-	width: 50px;
+
+* {
+    font-family: 'Press Start 2P';
 }
 
 a{
@@ -11,7 +10,7 @@ color: #282425!important;
 }
 ul.nav.nav-tabs > li{
 	display: inline-block;
-	line-height: 50px;
+	line-height: 20px;
 	height: 100%;
 	text-transform:uppercase;
 }
@@ -45,7 +44,24 @@ border-radius:0!important;
     color: #282425;
     float: right;
     margin-right: 15px;
-    font-weight: 400;
     position: absolute;
     right: 0;
+}
+
+.topButtons {
+	outline-color: blue;
+	border-radius: 20px;
+	color: black;
+	background-color: #BBBBBB;
+	height: 50px;
+	width: 200px;
+	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	vertical-align: middle;
+  	margin-right: 25px;
+  	margin-left: 25px;
+  	padding: 15px 10px 15px 10px;
+	font-size: 12px;
+	margin-top: 20px;
 }
