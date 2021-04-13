@@ -33,8 +33,8 @@ $(document).ready(() => {
     }
 
     const updateValues = () => {
-        document.getElementById("mainScreenScoreInt").innerHTML = getState().score.toFixed(0)
-        document.getElementById("mainScreenBalanceInt").innerHTML = getState().balance.toFixed(0)
+        document.getElementById("mainScreenScoreInt").innerHTML = Number(getState().score.toFixed(0)).toLocaleString()
+        document.getElementById("mainScreenBalanceInt").innerHTML = Number(getState().balance.toFixed(0)).toLocaleString()
     }
 
     const buildUpgrades = () => {
