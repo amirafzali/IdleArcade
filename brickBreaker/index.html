@@ -79,7 +79,7 @@
                         score++;
                         if(score == brickRowCount*brickColumnCount) {
                             alert("YOU WIN, CONGRATS!");
-                            document.location.reload();
+                            window.close();
                         }
                     }
                 }
@@ -152,7 +152,7 @@
                 lives--;
                 if(!lives) {
                     alert("GAME OVER");
-                    document.location.reload();
+                    window.close();
                 }
                 else {
                     x = canvas.width/2;
