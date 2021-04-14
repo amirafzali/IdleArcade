@@ -15,6 +15,10 @@ function startGame() {
     popOut();
     setTimeout(function() {
         gameOver = true;
+
+        score = score * getTPS()
+        scoreNode.innerHTML = score;
+
         for (var i=0; i < holes.length; i++) {
             holes[i].classList.add('hide');
         }
