@@ -45,6 +45,7 @@ $(document).ready(() => {
         const category = Object.keys(upgrade);
         list = ''
         category.forEach(item => {
+            //if (ownsUpgrade(item)) return;
             let entry = '<div class="item-container">\n'
             entry += '<div class="item-button"'
             if (ownsUpgrade(item)) entry += 'style="color:#FF0000"'

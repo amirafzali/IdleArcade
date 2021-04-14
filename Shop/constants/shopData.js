@@ -57,7 +57,7 @@ const helper = {
         name: "Arcade CEO",
         price: 20000000,
         effect: {
-            description: "Befriend a CEO of an arcade companies, giving you access to all tickets in their posession.",
+            description: "Befriend a CEO of an arcade company, giving you access to all tickets in their posession.",
             tps: 10000
         }
     },
