@@ -65,6 +65,9 @@ $(document).ready(() => {
             else entry += `<div class="item-desc">${upgrade[item].effect.description}</div>\n</div>`;
             list += entry;
         });
+        list += '<div class="item-container">\n<div class="item-button" style="color:#333333" id="Prestige">\n'
+        list += '<div id="Prestige">Prestige</div>\n<div id="Prestige">LOCKED</div>\n</div>\n'
+        list += `<div class="item-desc">Requires 5,000,000,000,000,000,000 TX to unlock this upgrade. This will reset progress and give a permanent TPS increase in the next playthrough.</div>\n</div>`;
         return list
     }
 

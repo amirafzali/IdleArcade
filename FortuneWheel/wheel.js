@@ -8,9 +8,9 @@ $(document).ready(() => {
   let spinsLeft = 3;
   let winnings = 0;
 
-  let cat1Prize = Math.round(5 + (10 * getTPS())).toLocaleString() + " Tix"
-  let cat2Prize = Math.round(50 + (60 * getTPS())).toLocaleString() + " Tix"
-  let cat3Prize = Math.round(10 + (15 * getTPS())).toLocaleString() + " Tix"
+  let cat1Prize = Math.round(5 + (10 * getTPS())).toLocaleString() + " TX"
+  let cat2Prize = Math.round(50 + (60 * getTPS())).toLocaleString() + " TX"
+  let cat3Prize = Math.round(10 + (15 * getTPS())).toLocaleString() + " TX"
   const prize_data = [
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""},
@@ -29,7 +29,7 @@ $(document).ready(() => {
     {prize: cat3Prize, message:""},
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""},
-    {prize: ownsUpgrade("upgrade10") ? (100 + 300 * getTPS()).toLocaleString() + " Tix" : "Upgrade Clicks", message:""},
+    {prize: ownsUpgrade("upgrade10") ? (100 + 300 * getTPS()).toLocaleString() + " TX" : "Upgrade Clicks", message:""},
     {prize: cat1Prize, message:""},
     {prize: cat3Prize, message:""}
   ];
@@ -158,7 +158,7 @@ $(document).ready(() => {
   }
 
   const getPrize = (prize) => {
-    if (prize.endsWith("Tix")) {
+    if (prize.endsWith("TX")) {
       let amount = Number(prize.split(" ")[0].replace(/,/g, ""));
       winnings += amount
       d3.select(".total").style({"display":"block"})
