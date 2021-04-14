@@ -167,7 +167,7 @@ const upgrade = {
         price: 50000000000,
         for: "helper6",
         effect: {
-            description: "Doubles the efficiency of ticket aliens.",
+            description: "Doubles the efficiency of aliens.",
             multiplier: 2
         }
     },

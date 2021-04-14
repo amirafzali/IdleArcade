@@ -10,7 +10,6 @@ $(document).ready(() => {
                 console.log(item)
             }
             entry += '>\n'
-            entry += '<img alt="IMG" class="item-image">\n'
             entry += '<div class="item-button"'
             if (getTickets() < helper[item].price * (1.15**(getNumHelpers(item)))) entry += 'style="color:#888800"'
             entry += `id=${item}>\n`
@@ -47,7 +46,6 @@ $(document).ready(() => {
         list = ''
         category.forEach(item => {
             let entry = '<div class="item-container">\n'
-            entry += '<img alt="IMG" class="item-image">\n'
             entry += '<div class="item-button"'
             if (ownsUpgrade(item)) entry += 'style="color:#FF0000"'
             else if (getNumHelpers(upgrade[item].for) < 10) entry += 'style="color:#333333"'
